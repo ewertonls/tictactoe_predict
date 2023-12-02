@@ -34,9 +34,11 @@ def print_game(game: str):
     if len(g) < 9:
         print(g)
         return
-    print(f'{g[0]} | {g[1]} | {g[2]}')
-    print(f'{g[3]} | {g[4]} | {g[5]}')
-    print(f'{g[6]} | {g[7]} | {g[8]}')
+    print(f' {g[0]} | {g[1]} | {g[2]}')
+    print('---+---+---')
+    print(f' {g[3]} | {g[4]} | {g[5]}')
+    print('---+---+---')
+    print(f' {g[6]} | {g[7]} | {g[8]}')
 
 data = read_csv('data.csv')
 
@@ -78,6 +80,7 @@ for i in range(len(pred_games)):
 
     print()
     print_game(game)
+    print()
 
     print(f'X will win: {result}')
     print('-' * 10)
